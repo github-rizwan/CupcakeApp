@@ -4,12 +4,37 @@
 
     <navigation app:startDestination="@id/startFragment" android:id="@+id/nav_graph" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <fragment android:id="@+id/startFragment" tools:layout="@layout/fragment_start" android:label="fragment_start" android:name="com.example.cupcakeapp.StartFragment"/>
+    <fragment android:id="@+id/startFragment" tools:layout="@layout/fragment_start" android:label="@string/app_name" android:name="com.example.cupcakeapp.StartFragment">
+        <action
+            android:id="@+id/action_startFragment_to_flavorFragment"
+            app:destination="@id/flavorFragment" />
+    </fragment>
 
-    <fragment android:id="@+id/flavorFragment" tools:layout="@layout/fragment_flavor" android:label="fragment_flavor" android:name="com.example.cupcakeapp.FlavorFragment"/>
+    <fragment android:id="@+id/flavorFragment" tools:layout="@layout/fragment_flavor" android:label="@string/choose_flavor" android:name="com.example.cupcakeapp.FlavorFragment">
+        <action
+            android:id="@+id/action_flavorFragment_to_pickupFragment"
+            app:destination="@id/pickupFragment" />
+        <action
+            android:id="@+id/action_flavorFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/flavorFragment" />
+    </fragment>
 
-    <fragment android:id="@+id/pickupFragment" tools:layout="@layout/fragment_pickup" android:label="fragment_pickup" android:name="com.example.cupcakeapp.PickupFragment"/>
+    <fragment android:id="@+id/pickupFragment" tools:layout="@layout/fragment_pickup" android:label="@string/choose_pickup_date" android:name="com.example.cupcakeapp.PickupFragment">
+        <action
+            android:id="@+id/action_pickupFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_pickupFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
 
-    <fragment android:id="@+id/summaryFragment" tools:layout="@layout/fragment_summary" android:label="fragment_summary" android:name="com.example.cupcakeapp.SummaryFragment"/>
+    <fragment android:id="@+id/summaryFragment" tools:layout="@layout/fragment_summary" android:label="@string/order_summary" android:name="com.example.cupcakeapp.SummaryFragment">
+        <action
+            android:id="@+id/action_summaryFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
 
 </navigation>
