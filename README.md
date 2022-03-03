@@ -1,2 +1,5 @@
 # CupcakeApp
-Kotlin + MVVM
+Kotlin
+
+ MVVM
+
