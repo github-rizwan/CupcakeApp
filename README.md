@@ -1,5 +1,8 @@
 # CupcakeApp
+
 Kotlin
 
- MVVM
+MVVM
+
+dataBinding
 
