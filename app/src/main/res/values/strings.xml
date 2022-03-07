@@ -29,6 +29,6 @@
         <item quantity="other">%d cupcakes</item>
     </plurals>
     <string name="order_details">Quantity: %1$s  \n Flavor: %2$s \nPickup date: %3$s \n
-        Total: %4$s \n\n Thank you!</string>
+        Total: %4$s \n\n Thank you.!</string>
 
 </resources>
